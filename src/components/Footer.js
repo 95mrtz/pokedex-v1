@@ -26,7 +26,7 @@ const Footer = () => {
     <Container>
       <InfoFooter>
         {" "}
-        <a href="#" target="_blank">
+        <a href="https://twitter.com/htcmanuelortiz" target="_blank">
           <ion-icon size="large" name="logo-twitter"></ion-icon>
         </a>
       </InfoFooter>
@@ -40,7 +40,7 @@ const Footer = () => {
       </InfoFooter>
       <InfoFooter>
         {" "}
-        <a href="#" target="_blank">
+        <a href="https://github.com/hctmanuelortiz" target="_blank">
           <ion-icon size="large" name="logo-github"></ion-icon>
         </a>{" "}
       </InfoFooter>

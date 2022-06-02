@@ -37,7 +37,6 @@ const App = () => {
         const data = await response.json();
         setPokemons(data.results);
         setUrlPokemon(data.next);
-        console.log(data)
       } catch (err) {
         console.log(err);
       }
