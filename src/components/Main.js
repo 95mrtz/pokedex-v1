@@ -17,7 +17,7 @@ const Navigation = styled.div`
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  padding: 15px;
+  padding: 15px 0;
 `;
 
 const Button = styled.button`
@@ -30,7 +30,6 @@ const Button = styled.button`
 `;
 
 const Container = styled.section`
-  grid-area: search;
   width: 100%;
   margin-bottom: 10px;
   padding: 14px 0;
@@ -61,10 +60,9 @@ const SearchBtn = styled.button`
 const List = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 23%);
-  height: 100%;
+  grid-template-rows: repeat(2, 1fr);
   width: 100%;
-  grid-gap: 10px;
+  grid-gap: 7px;
 `;
 
 const Style = {
@@ -90,6 +88,7 @@ const Main = ({ list, nextUrl }) => {
   const [previous, setPrevious] = useState(false);
 
   const [pokemons, setPokemons] = useState(list);
+  console.log("me renderice")
   const [urlPokemonNext, setUrlPokemonNext] = useState(nextUrl);
   const [urlPokemonPrev, setUrlPokemonPrev] = useState("");
 
@@ -166,27 +165,34 @@ const Main = ({ list, nextUrl }) => {
           </Form>
         </Formik>
       </Container>
+
       <FunFact>
         <p>Fun fact: To date there are 898 pokemon!</p>
       </FunFact>
+
       <List>
         {busquedaPokemon !== "" ? (
             <Card
-              key={busquedaPokemon.name}
               name={busquedaPokemon.name}
               id={busquedaPokemon.id}
               types={busquedaPokemon.types}
-            ></Card>
+              weight={busquedaPokemon.weight}
+              height={busquedaPokemon.height}
+              abilities={busquedaPokemon.abilities}
+              stats={busquedaPokemon.stats}
+            />
         ) : (
           pokemons.map((pokemon) => (
             <Card
               key={pokemon.name}
               name={pokemon.name}
               link={pokemon.url}
-            ></Card>
+            />
           ))
         )}
+        
       </List>
+
       {busquedaPokemon !== "" ? (
           <Navigation>
             <Button onClick={() => setBusquedaPokemon("")}>Volver a la lista</Button>

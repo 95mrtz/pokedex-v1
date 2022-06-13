@@ -14,9 +14,9 @@ background-color: whitesmoke;
 
   // si la pantalla es mas grande que 768 pix pasa esto:
   @media only screen and (min-width: 768px) {
-    height: 100vh;
+    min-height: 100vh;
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 15% 75% 10%;
+    grid-template-rows: 90px auto 50px;
     grid-template-areas:
       "header header header "
       ". main ."
@@ -27,7 +27,7 @@ background-color: whitesmoke;
 const App = () => {
   const [pokemons, setPokemons] = useState([]);
   const [urlPokemon, setUrlPokemon] = useState(
-    "https://pokeapi.co/api/v2/pokemon?limit=12"
+    "https://pokeapi.co/api/v2/pokemon?limit=6"
   );
 
   useEffect(() => {
@@ -49,9 +49,6 @@ const App = () => {
   return (
     <Container>
       <Header />
-      {
-        // le paso la url de la proxima tanda y la lista de los primeros 20 pokemones
-      }
       <Main list={pokemons} nextUrl={urlPokemon} />
       <Footer />
     </Container>

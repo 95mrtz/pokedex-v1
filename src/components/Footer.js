@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 const Container = styled.footer`
-  align-items: end;
   grid-area: footer;
   width: 100%;
   display: flex;

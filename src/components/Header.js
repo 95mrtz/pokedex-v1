@@ -9,8 +9,8 @@ const Banner = styled.header`
 `;
 
 const Logo = styled.img`
-  width: 260px;
-  height: 100px;
+  width: 200px;
+  height: 70px;
 `;
 
 const SubTitle = styled.h2`
