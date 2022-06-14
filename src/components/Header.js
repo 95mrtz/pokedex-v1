@@ -3,9 +3,14 @@ import styled from "styled-components";
 const Banner = styled.header`
   grid-area: header;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+
+  @media only screen and (min-width: 720px) {
+    flex-direction: row;
+  justify-content: space-around;
+  }
 `;
 
 const Logo = styled.img`

@@ -5,22 +5,29 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 const Container = styled.div`
-background-color: whitesmoke;
+  background-color: whitesmoke;
   display: grid;
+  grid-template-columns: 5% 90% 5%;
+  grid-template-rows: 120px auto 50px;
   grid-template-areas:
-    "header header"
-    "main main"
-    "footer footer";
+    "header header header"
+    ". main ."
+    "footer footer footer";
 
-  // si la pantalla es mas grande que 768 pix pasa esto:
-  @media only screen and (min-width: 768px) {
-    min-height: 100vh;
+  // si la pantalla es mas grande que  720 pix pasa esto:
+  @media only screen and (min-width: 720px) {
+    grid-template-columns: 2% 96% 2%;
+  }
+
+  // si la pantalla es mas grande que  940 pix pasa esto:
+  @media only screen and (min-width: 940px) {
+    grid-template-columns: 5% 90% 5%;
+  }
+
+  // si la pantalla es mas grande que  1200 pix pasa esto:
+  @media only screen and (min-width: 1200px) {
     grid-template-columns: 10% 80% 10%;
-    grid-template-rows: 90px auto 50px;
-    grid-template-areas:
-      "header header header "
-      ". main ."
-      "footer footer footer ";
+
   }
 `;
 
@@ -43,8 +50,6 @@ const App = () => {
     };
     getData();
   }, []);
-
-
 
   return (
     <Container>
