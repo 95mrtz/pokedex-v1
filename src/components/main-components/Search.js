@@ -5,7 +5,6 @@ const Container = styled.section`
   width: 100%;
   margin-bottom: 10px;
   padding: 14px 0;
-  background-color: #ebebeb;
   border-radius: 5px;
 `;
 

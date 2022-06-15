@@ -15,9 +15,7 @@ const InfoFooter = styled.div`
   justify-content: center;
   align-items: center;
 
-  && ion-icon {
-  color: black;
-}
+
 `
 
 const Footer = () => {
@@ -26,7 +24,7 @@ const Footer = () => {
       <InfoFooter>
         {" "}
         <a href="https://twitter.com/htcmanuelortiz" target="_blank">
-          <ion-icon size="large" name="logo-twitter"></ion-icon>
+          <ion-icon className='icon' size="large" name="logo-twitter"></ion-icon>
         </a>
       </InfoFooter>
       <InfoFooter>
@@ -40,7 +38,7 @@ const Footer = () => {
       <InfoFooter>
         {" "}
         <a href="https://github.com/hctmanuelortiz" target="_blank">
-          <ion-icon size="large" name="logo-github"></ion-icon>
+          <ion-icon className='icon' size="large" name="logo-github"></ion-icon>
         </a>{" "}
       </InfoFooter>
     </Container>

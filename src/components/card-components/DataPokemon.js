@@ -25,7 +25,6 @@ const Information = styled.div`
 const IdPokemon = styled.h2`
   font-size: 15px;
   font-weight: 900;
-  color: #78909c;
 `;
 
 const NamePokemon = styled.p`

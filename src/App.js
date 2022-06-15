@@ -3,12 +3,15 @@ import styled from "styled-components";
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import { ThemeProvider } from "styled-components";
+
+import { lightTheme, darkTheme, GlobalStyles } from "./theme.js";
+
 
 const Container = styled.div`
-  background-color: whitesmoke;
   display: grid;
   grid-template-columns: 5% 90% 5%;
-  grid-template-rows: 120px auto 50px;
+  grid-template-rows: 150px auto 50px;
   grid-template-areas:
     "header header header"
     ". main ."
@@ -51,12 +54,21 @@ const App = () => {
     getData();
   }, []);
 
+
+  const [theme, setTheme] = useState("light");
+  const isDarkTheme = theme === "dark";
+
   return (
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <>
+        <GlobalStyles />
     <Container>
-      <Header />
+      <Header theme={theme} setTheme={setTheme} isDark={isDarkTheme} />
       <Main list={pokemons} nextUrl={urlPokemon} />
       <Footer />
     </Container>
+    </>
+    </ThemeProvider>
   );
 };
 
