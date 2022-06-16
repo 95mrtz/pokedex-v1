@@ -31,7 +31,7 @@ let Style = {
       outline: "none",
       border: "none",
       padding: "8px 12px",
-      margin: "5px 0",
+      margin: "9px 0",
       borderRadius: "5px",
       boxShadow: "5px 2px 2px 1px rgba(0, 0, 0, 0.2)",
       fontSize: "14px",

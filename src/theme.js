@@ -21,7 +21,7 @@ export const lightTheme = {
   link: '#747474',
 };
 export const darkTheme = {
-  body: '#373739',
+  body: '#22272E',
   text: '#f1f1f1',
   link: '#efeff0',
 };

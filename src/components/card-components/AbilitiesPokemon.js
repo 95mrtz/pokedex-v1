@@ -7,6 +7,7 @@ const Container = styled.section`
   align-items: center;
   height: 100%;
   width: 100%;
+  padding: 10px;
 `;
 
 const Skills = styled.article`
@@ -26,6 +27,7 @@ const Skills = styled.article`
   & ul > li {
     list-style: none;
     margin: 0 3px;
+    font-style: italic;
   }
 `;
 
@@ -56,7 +58,7 @@ const AbilitiesPokemon = ({ abilities, nameStat, stat }) => {
         </p>
         <ul>
           {abilities?.map((element) => (
-            <li key={element}>&#8226;{element}</li>
+            <li key={element}>&#8226; {element}</li>
           ))}
         </ul>
       </Skills>

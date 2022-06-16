@@ -34,6 +34,7 @@ const ToggleButton = styled.button`
   margin: 10px 0;
   border: none;
   border-radius: 100%;
+  cursor: pointer;
 
   ion-icon {
     font-size: 26px;
